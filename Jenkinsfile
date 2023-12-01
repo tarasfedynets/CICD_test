@@ -1,5 +1,5 @@
 pipeline {
-  agent CentOs
+  agent {label 'CentOs'}
   stages {
     stage('st1') {
       steps {
