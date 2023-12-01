@@ -1,9 +1,14 @@
 pipeline {
-  agent {label 'CentOs'}
+  agent {
+    node {
+      label 'CentOs'
+    }
+
+  }
   stages {
     stage('st1') {
       steps {
-         sh 'yum install httpd && sudo mkdir -p /var/www/html'
+        sh 'yum install httpd && sudo mkdir -p /var/www/html'
       }
     }
 
